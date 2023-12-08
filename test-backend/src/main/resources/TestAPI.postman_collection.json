@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "f6cc0198-c2b9-4df9-974c-c67d019098f8",
+		"name": "TestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8824040"
+	},
+	"item": [
+		{
+			"name": "crearCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Juan Osorio\",\r\n    \"genero\" : \"F\",\r\n    \"edad\" : \"37\",\r\n    \"identificacion\" : \"01492039\",\r\n    \"direccion\" : \"13 junio y Equinoccial\",\r\n    \"telefono\" : \"098874587\",\r\n    \"contrasena\" : \"12456789\",\r\n    \"estado\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/clientes/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarCliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCliente\" : 10,\r\n    \"nombre\" : \"Maria Elena Ruiz Ramirez\",\r\n    \"genero\" : \"F\",\r\n    \"edad\" : \"25\",\r\n    \"identificacion\" : \"43992127\",\r\n    \"direccion\" : \"Av. Los Postes 1044, La Molina\",\r\n    \"telefono\" : \"991384223\",\r\n    \"contrasena\" : \"Al3cc3xy11\",\r\n    \"estado\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/clientes/editar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/clientes/eliminar/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"eliminar",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearCuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCliente\" : 10,\r\n    \"numeroCuenta\" : \"000239870193213323\",\r\n    \"tipoCuenta\" : 1,\r\n    \"saldoInicial\" : 1000.00,\r\n    \"estado\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cuentas/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cuentas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarCuenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCuenta\": \"1\",\r\n    \"idCliente\" : 10,\r\n    \"numeroCuenta\" : \"000239870193213046\",\r\n    \"tipoCuenta\" : 1,\r\n    \"saldoInicial\" : 1000.00,\r\n    \"estado\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cuentas/editar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cuentas",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCuenta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/cuentas/eliminar/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cuentas",
+						"eliminar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearMovimiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\" : \"10-09-2023\",\r\n    \"valor\" : 200.00,\r\n    \"idCuenta\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/movimientos/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movimientos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerEstadoDeCuenta",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerEstadoDeCuentaPorFechas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movimientos/obtenerEstadoDeCuentaPorFechas?idCliente=11&fechaIni=2023-09-03&fechaFin=2023-09-05",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movimientos",
+						"obtenerEstadoDeCuentaPorFechas"
+					],
+					"query": [
+						{
+							"key": "idCliente",
+							"value": "11"
+						},
+						{
+							"key": "fechaIni",
+							"value": "2023-09-03"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2023-09-05"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
